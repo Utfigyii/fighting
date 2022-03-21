@@ -12,8 +12,7 @@ var isStunned = false
 
 func _physics_process(delta):
 	velocity.y += GRAVITY * delta
-	velocity = move_and_slide(velocity, Vector2.UP)
-	pass
+	velocity = move_and_slide(velocity, Vector2(0, 1))
 	
 	
 func getInputDirection():
