@@ -11,11 +11,12 @@ var canAttack = true
 var isStunned = false
 
 func _physics_process(delta):
-	
+	velocity.y += GRAVITY * delta
+	velocity = move_and_slide(velocity, Vector2.UP)
 	pass
 	
 	
-func _getInputDirection():
+func getInputDirection():
 	var inputDirection = Vector2()
 	inputDirection.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_right")
 	inputDirection.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
