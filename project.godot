@@ -11,7 +11,15 @@ config_version=4
 [application]
 
 config/name="FightingGame"
+run/main_scene="res://assets/scenes/testArena.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=640
+window/size/height=480
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [physics]
 
