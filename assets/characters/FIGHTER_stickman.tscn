@@ -155,17 +155,17 @@ tracks/1/keys = {
 [sub_resource type="AnimationNodeAnimation" id=13]
 animation = "jump"
 
-[sub_resource type="AnimationNodeTransition" id=5]
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "idle"
+
+[sub_resource type="AnimationNodeTransition" id=11]
 input_count = 2
 input_0/name = "no"
 input_0/auto_advance = false
 input_1/name = "yes"
 input_1/auto_advance = false
 
-[sub_resource type="AnimationNodeAnimation" id=6]
-animation = "idle"
-
-[sub_resource type="AnimationNodeTransition" id=11]
+[sub_resource type="AnimationNodeTransition" id=5]
 input_count = 2
 input_0/name = "no"
 input_0/auto_advance = false
@@ -179,16 +179,16 @@ animation = "walk"
 graph_offset = Vector2( -689.722, 51 )
 nodes/Animation/node = SubResource( 13 )
 nodes/Animation/position = Vector2( -60, 100 )
-nodes/IsOnGround/node = SubResource( 5 )
-nodes/IsOnGround/position = Vector2( 186.667, 133.333 )
 nodes/idleAnim/node = SubResource( 6 )
 nodes/idleAnim/position = Vector2( -260, 180 )
 nodes/isWalking/node = SubResource( 11 )
 nodes/isWalking/position = Vector2( -60, 220 )
 nodes/output/position = Vector2( 373.333, 80 )
+nodes/ssOnGround/node = SubResource( 5 )
+nodes/ssOnGround/position = Vector2( 186.667, 133.333 )
 nodes/walkAnim/node = SubResource( 10 )
 nodes/walkAnim/position = Vector2( -260, 320 )
-node_connections = [ "output", 0, "IsOnGround", "IsOnGround", 0, "Animation", "IsOnGround", 1, "isWalking", "isWalking", 0, "idleAnim", "isWalking", 1, "walkAnim" ]
+node_connections = [ "output", 0, "ssOnGround", "isWalking", 0, "idleAnim", "isWalking", 1, "walkAnim", "ssOnGround", 0, "Animation", "ssOnGround", 1, "isWalking" ]
 
 [node name="FIGHTER_stickman" type="Node2D"]
 scale = Vector2( 0.5, 0.5 )
@@ -203,6 +203,7 @@ shape = SubResource( 8 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
 frames = SubResource( 1 )
 animation = "idle"
+frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
 root_node = NodePath("../..")
@@ -215,5 +216,9 @@ anims/walk = SubResource( 9 )
 tree_root = SubResource( 7 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/IsOnGround/current = 1
 parameters/isWalking/current = 0
+parameters/ssOnGround/current = 1
+
+[node name="groundCheck" type="RayCast2D" parent="KinematicBody2D"]
+enabled = true
+cast_to = Vector2( 0, 300 )

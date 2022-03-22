@@ -2,11 +2,10 @@ extends KinematicBody2D
 
 const GRAVITY = 9.2
 
-
 var y_velo = 0
 var facing_right = false
 var speed = 300
-var jumpForce = 20
+var jumpForce = 50
 var velocity = Vector2()
 
 var isOnGround  = true
@@ -16,11 +15,21 @@ var isStunned = false
 
 func _physics_process(delta):
 	handleInputs()
+	
+	y_velo -= GRAVITY * delta
+	if y_velo < -30:
+		y_velo = 30
+		
+	if $groundCheck.is_colliding():
+		y_velo = 0
+		isOnGround = true
+	else:
+		isOnGround = false
 	print(getInputDirection())
 	if getInputDirection().x != 0:
 		isMoving = true
-		velocity = move_and_slide(getInputDirection() * speed)
-		move_and_slide(velocity)
+		velocity = move_and_slide(Vector2(getInputDirection().x * speed, y_velo))
+		move_and_slide(velocity, Vector2(0, 1))
 	else:
 		isMoving = false
 		
@@ -29,7 +38,7 @@ func _physics_process(delta):
 func getInputDirection():
 	var inputDirection = Vector2()
 	inputDirection.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	inputDirection.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+	inputDirection.y = Input.get_action_strength("ui_up") - Input.get_action_strength("ui_down")
 	if inputDirection.x == -1:
 		facing_right = true
 	else:
