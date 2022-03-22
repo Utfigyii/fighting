@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://assets/textures/fighters/stickman/stickman_idle0000.png" type="Texture" id=1]
 [ext_resource path="res://assets/textures/fighters/stickman/stickman_idle0001.png" type="Texture" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://assets/textures/fighters/stickman/stickman_ljab0009.png" type="Texture" id=4]
 [ext_resource path="res://assets/textures/fighters/stickman/stickman_ljab0010.png" type="Texture" id=5]
 [ext_resource path="res://assets/scripts/FIGHTER_stickman.gd" type="Script" id=6]
+[ext_resource path="res://assets/textures/fighters/stickman/stickman_walk0020.png" type="Texture" id=7]
+[ext_resource path="res://assets/textures/fighters/stickman/stickman_walk0019.png" type="Texture" id=8]
+[ext_resource path="res://assets/textures/fighters/stickman/stickman_walk0018.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 64, 214 )
@@ -21,6 +24,11 @@ animations = [ {
 "loop": true,
 "name": "ljab",
 "speed": 24.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 8 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "walk",
+"speed": 24.0
 } ]
 
 [sub_resource type="Animation" id=2]
@@ -28,7 +36,7 @@ resource_name = "idle"
 length = 0.25
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/path = NodePath("KinematicBody2D/AnimatedSprite:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -40,7 +48,7 @@ tracks/0/keys = {
 "values": [ "idle" ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("AnimatedSprite:frame")
+tracks/1/path = NodePath("KinematicBody2D/AnimatedSprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -81,6 +89,38 @@ tracks/1/keys = {
 "values": [ 0, 1 ]
 }
 
+[sub_resource type="Animation" id=9]
+resource_name = "walk"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("KinematicBody2D/AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KinematicBody2D/AnimatedSprite:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "walk" ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "walk"
+
 [sub_resource type="AnimationNodeTransition" id=4]
 input_count = 2
 input_0/name = "no"
@@ -96,17 +136,20 @@ input_1/name = "yes"
 input_1/auto_advance = false
 
 [sub_resource type="AnimationNodeAnimation" id=6]
+animation = "idle"
 
 [sub_resource type="AnimationNodeBlendTree" id=7]
-graph_offset = Vector2( -449.102, -56.4815 )
+graph_offset = Vector2( -874.722, 182.362 )
+nodes/Animation/node = SubResource( 10 )
+nodes/Animation/position = Vector2( -340, 120 )
 nodes/IsIdle/node = SubResource( 4 )
 nodes/IsIdle/position = Vector2( -80, 186.667 )
 nodes/IsOnGround/node = SubResource( 5 )
 nodes/IsOnGround/position = Vector2( 186.667, 133.333 )
 nodes/idleAnim/node = SubResource( 6 )
-nodes/idleAnim/position = Vector2( -400, 133.333 )
+nodes/idleAnim/position = Vector2( -460, 260 )
 nodes/output/position = Vector2( 373.333, 80 )
-node_connections = [ "output", 0, "IsOnGround", "IsIdle", 1, "idleAnim", "IsOnGround", 1, "IsIdle" ]
+node_connections = [ "output", 0, "IsOnGround", "IsIdle", 0, "Animation", "IsIdle", 1, "idleAnim", "IsOnGround", 1, "IsIdle" ]
 
 [node name="FIGHTER_stickman" type="Node2D"]
 scale = Vector2( 0.5, 0.5 )
@@ -120,16 +163,17 @@ shape = SubResource( 8 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
 frames = SubResource( 1 )
-animation = "ljab"
+animation = "idle"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
 root_node = NodePath("../..")
 anims/idle = SubResource( 2 )
 anims/ljab = SubResource( 3 )
+anims/walk = SubResource( 9 )
 
 [node name="AnimationTree" type="AnimationTree" parent="KinematicBody2D"]
 tree_root = SubResource( 7 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/IsIdle/current = 0
+parameters/IsIdle/current = 1
 parameters/IsOnGround/current = 1

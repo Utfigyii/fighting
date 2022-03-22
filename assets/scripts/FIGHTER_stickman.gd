@@ -20,6 +20,10 @@ func _physics_process(delta):
 		isMoving = true
 		velocity = move_and_slide(getInputDirection() * speed)
 		move_and_slide(velocity)
+	else:
+		isMoving = false
+		
+	doAnimation()
 	
 func getInputDirection():
 	var inputDirection = Vector2()
@@ -30,3 +34,7 @@ func getInputDirection():
 	else:
 		facing_right = false
 	return inputDirection
+
+func doAnimation():
+	if isMoving && isOnGround:
+		pass
