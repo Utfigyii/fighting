@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 const GRAVITY = 9.2
 
+onready var N_AnimationTree = get_node("KinematicBody2D/AnimationTree")
+
 var y_velo = 0
 var facing_right = false
 var speed = 300
@@ -15,6 +17,7 @@ var isStunned = false
 func _physics_process(delta):
 	print(getInputDirection())
 	if getInputDirection().x != 0:
+		isMoving = true
 		velocity = move_and_slide(getInputDirection() * speed)
 		move_and_slide(velocity)
 	
