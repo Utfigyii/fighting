@@ -2,11 +2,11 @@ extends KinematicBody2D
 
 const GRAVITY = 9.2
 
-onready var N_AnimationTree = get_node("KinematicBody2D/AnimationTree")
 
 var y_velo = 0
 var facing_right = false
 var speed = 300
+var jumpForce = 20
 var velocity = Vector2()
 
 var isOnGround  = true
@@ -15,6 +15,7 @@ var canAttack = true
 var isStunned = false
 
 func _physics_process(delta):
+	handleInputs()
 	print(getInputDirection())
 	if getInputDirection().x != 0:
 		isMoving = true
@@ -37,4 +38,11 @@ func getInputDirection():
 
 func doAnimation():
 	if isMoving && isOnGround:
-		pass
+		$AnimationTree.set("parameters/isWalking/current", 1)
+	else:
+		$AnimationTree.set("parameters/isWalking/current", 0)
+
+func handleInputs():
+	if Input.is_action_just_pressed("ui_up"):
+		if isOnGround:
+			y_velo = jumpForce

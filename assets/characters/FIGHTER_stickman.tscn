@@ -118,16 +118,6 @@ tracks/1/keys = {
 "values": [ "walk" ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=10]
-animation = "walk"
-
-[sub_resource type="AnimationNodeTransition" id=4]
-input_count = 2
-input_0/name = "no"
-input_0/auto_advance = false
-input_1/name = "yes"
-input_1/auto_advance = false
-
 [sub_resource type="AnimationNodeTransition" id=5]
 input_count = 2
 input_0/name = "no"
@@ -138,18 +128,28 @@ input_1/auto_advance = false
 [sub_resource type="AnimationNodeAnimation" id=6]
 animation = "idle"
 
+[sub_resource type="AnimationNodeTransition" id=11]
+input_count = 2
+input_0/name = "no"
+input_0/auto_advance = false
+input_1/name = "yes"
+input_1/auto_advance = false
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "walk"
+
 [sub_resource type="AnimationNodeBlendTree" id=7]
-graph_offset = Vector2( -874.722, 182.362 )
-nodes/Animation/node = SubResource( 10 )
-nodes/Animation/position = Vector2( -340, 120 )
-nodes/IsIdle/node = SubResource( 4 )
-nodes/IsIdle/position = Vector2( -80, 186.667 )
+graph_offset = Vector2( -689.722, 51 )
 nodes/IsOnGround/node = SubResource( 5 )
 nodes/IsOnGround/position = Vector2( 186.667, 133.333 )
 nodes/idleAnim/node = SubResource( 6 )
-nodes/idleAnim/position = Vector2( -460, 260 )
+nodes/idleAnim/position = Vector2( -280, 120 )
+nodes/isWalking/node = SubResource( 11 )
+nodes/isWalking/position = Vector2( -92.7219, 131 )
 nodes/output/position = Vector2( 373.333, 80 )
-node_connections = [ "output", 0, "IsOnGround", "IsIdle", 0, "Animation", "IsIdle", 1, "idleAnim", "IsOnGround", 1, "IsIdle" ]
+nodes/walkAnim/node = SubResource( 10 )
+nodes/walkAnim/position = Vector2( -280, 240 )
+node_connections = [ "output", 0, "IsOnGround", "IsOnGround", 1, "isWalking", "isWalking", 0, "idleAnim", "isWalking", 1, "walkAnim" ]
 
 [node name="FIGHTER_stickman" type="Node2D"]
 scale = Vector2( 0.5, 0.5 )
@@ -175,5 +175,5 @@ anims/walk = SubResource( 9 )
 tree_root = SubResource( 7 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/IsIdle/current = 1
 parameters/IsOnGround/current = 1
+parameters/isWalking/current = 0
