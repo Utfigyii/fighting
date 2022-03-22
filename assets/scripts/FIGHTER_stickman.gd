@@ -37,10 +37,14 @@ func getInputDirection():
 	return inputDirection
 
 func doAnimation():
-	if isMoving && isOnGround:
-		$AnimationTree.set("parameters/isWalking/current", 1)
+	if isOnGround:
+		$AnimationTree.set("parameters/isOnGround/current", 1)
+		if isMoving:
+			$AnimationTree.set("parameters/isWalking/current", 1)
+		else:
+			$AnimationTree.set("parameters/isWalking/current", 0)
 	else:
-		$AnimationTree.set("parameters/isWalking/current", 0)
+		$AnimationTree.set("parameters/isOnGround/current", 0)
 
 func handleInputs():
 	if Input.is_action_just_pressed("ui_up"):
