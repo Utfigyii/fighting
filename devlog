@@ -5,3 +5,5 @@ laitan tikku ukkoa liikkeelle
 22.3
 tikku ukko liikkuu nyt
 (ei liikkunut koska sprite ei ollut kinematicbodyn childinä. pidä mielessä)
+tikku ukolle lisää frameja
+
