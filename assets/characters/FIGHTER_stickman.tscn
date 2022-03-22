@@ -106,7 +106,7 @@ nodes/IsOnGround/position = Vector2( 186.667, 133.333 )
 nodes/idleAnim/node = SubResource( 6 )
 nodes/idleAnim/position = Vector2( -400, 133.333 )
 nodes/output/position = Vector2( 373.333, 80 )
-node_connections = [ "output", 0, "IsOnGround", "IsOnGround", 1, "IsIdle", "IsIdle", 1, "idleAnim" ]
+node_connections = [ "output", 0, "IsOnGround", "IsIdle", 1, "idleAnim", "IsOnGround", 1, "IsIdle" ]
 
 [node name="FIGHTER_stickman" type="Node2D"]
 scale = Vector2( 0.5, 0.5 )
