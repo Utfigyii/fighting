@@ -15,7 +15,7 @@ var isStunned = false
 func _physics_process(delta):
 	print(getInputDirection())
 	if getInputDirection().x != 0:
-		velocity = move_and_slide(getInputDirection() * 5000)
+		velocity = move_and_slide(getInputDirection() * speed)
 		move_and_slide(velocity)
 	
 func getInputDirection():
