@@ -273,3 +273,5 @@ parameters/isWalking/current = 0
 [node name="groundCheck" type="RayCast2D" parent="KinematicBody2D"]
 enabled = true
 cast_to = Vector2( 0, 250 )
+
+[node name="attacks" type="Node2D" parent="KinematicBody2D"]
