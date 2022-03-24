@@ -22,16 +22,9 @@ func _physics_process(delta):
 	handleInputs()
 	
 	doGravity(delta)
+	doMovemet(delta)
 	
-	print(getInputDirection())
-	if getInputDirection().x != 0 && canMove:
-		isMoving = true
-	#	velocity = move_and_slide(Vector2(getInputDirection().x * speed, y_velo))
-	#	move_and_slide(velocity, Vector2(0, 1))
-	else:
-		isMoving = false
-	velocity = move_and_slide(Vector2(getInputDirection().x * speed, y_velo))
-	move_and_slide(velocity, Vector2(0, 1))
+
 		
 	doAnimation()
 	
@@ -56,7 +49,7 @@ func doAnimation():
 		$AnimationTree.set("parameters/isOnGround/current", 0)
 
 func handleInputs():
-	if Input.is_action_just_pressed("ui_up"):
+	if Input.is_action_just_pressed("ui_up") && isOnGround && canJump:
 		y_velo = -800
 		isOnGround = false
 	if Input.is_action_pressed("ui_down"):
@@ -91,3 +84,17 @@ func doGravity(delta):
 	if y_velo > 400:
 		y_velo = 400
 	print(y_velo)
+
+func doMovemet(delta):
+	print(getInputDirection())
+	if getInputDirection().x != 0 && canMove:
+		isMoving = true
+
+	else:
+		isMoving = false
+	if canMove:
+		velocity = move_and_slide(Vector2(getInputDirection().x * speed, y_velo))
+		move_and_slide(velocity, Vector2(0, 1))
+	else:
+		velocity = move_and_slide(Vector2(0, y_velo))
+		move_and_slide(velocity, Vector2(0, 1))
