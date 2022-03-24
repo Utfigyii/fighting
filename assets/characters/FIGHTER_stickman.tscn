@@ -1,8 +1,9 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://assets/textures/fighters/stickman/stickman_idle0000.png" type="Texture" id=1]
 [ext_resource path="res://assets/textures/fighters/stickman/stickman_idle0001.png" type="Texture" id=2]
 [ext_resource path="res://assets/textures/fighters/stickman/stickman_idle0002.png" type="Texture" id=3]
+[ext_resource path="res://assets/textures/fighters/stickman/stickman_crouch0022.png" type="Texture" id=4]
 [ext_resource path="res://assets/scripts/FIGHTER_stickman.gd" type="Script" id=6]
 [ext_resource path="res://assets/textures/fighters/stickman/stickman_walk0020.png" type="Texture" id=7]
 [ext_resource path="res://assets/textures/fighters/stickman/stickman_walk0019.png" type="Texture" id=8]
@@ -12,12 +13,20 @@
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 64, 214 )
 
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 91, 122 )
+
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "idle",
 "speed": 24.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "crouch",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ), ExtResource( 8 ), ExtResource( 7 ) ],
 "loop": true,
@@ -29,6 +38,35 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 } ]
+
+[sub_resource type="Animation" id=15]
+resource_name = "crouch"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("KinematicBody2D/AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "crouch" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KinematicBody2D/AnimatedSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
 
 [sub_resource type="Animation" id=2]
 resource_name = "idle"
@@ -148,8 +186,18 @@ tracks/1/keys = {
 [sub_resource type="AnimationNodeAnimation" id=13]
 animation = "jump"
 
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "crouch"
+
 [sub_resource type="AnimationNodeAnimation" id=6]
 animation = "idle"
+
+[sub_resource type="AnimationNodeTransition" id=17]
+input_count = 2
+input_0/name = "no"
+input_0/auto_advance = false
+input_1/name = "yes"
+input_1/auto_advance = false
 
 [sub_resource type="AnimationNodeTransition" id=5]
 input_count = 2
@@ -169,19 +217,23 @@ input_1/auto_advance = false
 animation = "walk"
 
 [sub_resource type="AnimationNodeBlendTree" id=7]
-graph_offset = Vector2( -305.333, 48.3333 )
+graph_offset = Vector2( -704, 142 )
 nodes/Animation/node = SubResource( 13 )
 nodes/Animation/position = Vector2( -60, 100 )
+nodes/crouchAnim/node = SubResource( 16 )
+nodes/crouchAnim/position = Vector2( -586.667, 293.333 )
 nodes/idleAnim/node = SubResource( 6 )
-nodes/idleAnim/position = Vector2( -260, 180 )
+nodes/idleAnim/position = Vector2( -586.667, 186.667 )
+nodes/isCrouching/node = SubResource( 17 )
+nodes/isCrouching/position = Vector2( -320, 160 )
 nodes/isOnGround/node = SubResource( 5 )
 nodes/isOnGround/position = Vector2( 186.667, 133.333 )
 nodes/isWalking/node = SubResource( 11 )
-nodes/isWalking/position = Vector2( -60, 220 )
+nodes/isWalking/position = Vector2( -53.3333, 213.333 )
 nodes/output/position = Vector2( 373.333, 80 )
 nodes/walkAnim/node = SubResource( 10 )
 nodes/walkAnim/position = Vector2( -260, 320 )
-node_connections = [ "output", 0, "isOnGround", "isOnGround", 0, "Animation", "isOnGround", 1, "isWalking", "isWalking", 0, "idleAnim", "isWalking", 1, "walkAnim" ]
+node_connections = [ "output", 0, "isOnGround", "isOnGround", 0, "Animation", "isOnGround", 1, "isWalking", "isCrouching", 0, "idleAnim", "isCrouching", 1, "crouchAnim", "isWalking", 0, "isCrouching", "isWalking", 1, "walkAnim" ]
 
 [node name="FIGHTER_stickman" type="Node2D"]
 scale = Vector2( 0.5, 0.5 )
@@ -193,12 +245,18 @@ script = ExtResource( 6 )
 position = Vector2( -15, 14 )
 shape = SubResource( 8 )
 
+[node name="crouchShape" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -45, 104 )
+shape = SubResource( 14 )
+disabled = true
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
 frames = SubResource( 1 )
-animation = "jump"
+animation = "crouch"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
 root_node = NodePath("../..")
+anims/crouch = SubResource( 15 )
 anims/idle = SubResource( 2 )
 anims/jump = SubResource( 12 )
 anims/ljab = SubResource( 3 )
@@ -208,7 +266,8 @@ anims/walk = SubResource( 9 )
 tree_root = SubResource( 7 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/isOnGround/current = 0
+parameters/isCrouching/current = 1
+parameters/isOnGround/current = 1
 parameters/isWalking/current = 0
 
 [node name="groundCheck" type="RayCast2D" parent="KinematicBody2D"]

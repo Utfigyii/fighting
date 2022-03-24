@@ -15,6 +15,8 @@ var isStunned = false
 var isJumping = false
 var canJump = true
 var isAttacking = false
+var isCrouching = false
+var canMove = true
 
 func _physics_process(delta):
 	handleInputs()
@@ -22,7 +24,7 @@ func _physics_process(delta):
 	doGravity(delta)
 	
 	print(getInputDirection())
-	if getInputDirection().x != 0:
+	if getInputDirection().x != 0 && canMove:
 		isMoving = true
 	#	velocity = move_and_slide(Vector2(getInputDirection().x * speed, y_velo))
 	#	move_and_slide(velocity, Vector2(0, 1))
@@ -57,7 +59,20 @@ func handleInputs():
 	if Input.is_action_just_pressed("ui_up"):
 		y_velo = -800
 		isOnGround = false
+	if Input.is_action_pressed("ui_down"):
+		$AnimationTree.set("parameters/isCrouching/current", 1)
+		isCrouching = true
+		canMove = false
+		$defaultShape.disabled = true
+		$crouchShape.disabled = false
+	else:
+		$AnimationTree.set("parameters/isCrouching/current", 0)
+		isCrouching = false
+		canMove = true
+		$defaultShape.disabled = false
+		$crouchShape.disabled = true
 		
+	
 	if Input.is_action_just_pressed("close_game"):
 		get_tree().quit()
 	if Input.is_action_just_pressed("reload_scene"):
