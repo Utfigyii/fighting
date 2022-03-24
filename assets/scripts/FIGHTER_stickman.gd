@@ -13,17 +13,14 @@ var isMoving = false
 var canAttack = true
 var isStunned = false
 var isJumping = false
+var canJump = true
+var isAttacking = false
 
 func _physics_process(delta):
 	handleInputs()
 	
-	doGraviy()
-		
-	if $groundCheck.is_colliding():
-		y_velo = 0
-		isOnGround = true
-	else:
-		isOnGround = false
+	doGravity(delta)
+	
 	print(getInputDirection())
 	if getInputDirection().x != 0:
 		isMoving = true
@@ -33,7 +30,6 @@ func _physics_process(delta):
 		isMoving = false
 	velocity = move_and_slide(Vector2(getInputDirection().x * speed, y_velo))
 	move_and_slide(velocity, Vector2(0, 1))
-	print(y_velo)
 		
 	doAnimation()
 	
@@ -58,15 +54,25 @@ func doAnimation():
 		$AnimationTree.set("parameters/isOnGround/current", 0)
 
 func handleInputs():
-	if Input.is_action_just_pressed("ui_accept"):
-		#if isOnGround:
-		y_velo = jumpForce
-		print("hyppää")
+	if Input.is_action_just_pressed("ui_up"):
+		y_velo = -800
+		isOnGround = false
 		
 	if Input.is_action_just_pressed("close_game"):
 		get_tree().quit()
 	if Input.is_action_just_pressed("reload_scene"):
 		get_tree().reload_current_scene()
 
-func doGraviy():
-	pass
+func doGravity(delta):
+	if y_velo > 0:
+		$groundCheck.enabled = true
+		if $groundCheck.is_colliding():
+			isOnGround = true
+		else:
+			isOnGround = false
+	else:
+		$groundCheck.enabled = false
+	y_velo -= GRAVITY * delta * -200
+	if y_velo > 400:
+		y_velo = 400
+	print(y_velo)
