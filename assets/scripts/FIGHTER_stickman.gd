@@ -10,13 +10,13 @@ var velocity = Vector2()
 
 var isOnGround  = true
 var isMoving = false
-var canAttack = true
 var isStunned = false
 var isJumping = false
-var canJump = true
 var isAttacking = false
 var isCrouching = false
 var canMove = true
+var canJump = true
+var canAttack = true
 
 func _physics_process(delta):
 	handleInputs()
