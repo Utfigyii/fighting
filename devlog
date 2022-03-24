@@ -7,3 +7,6 @@ tikku ukko liikkuu nyt
 (ei liikkunut koska sprite ei ollut kinematicbodyn childinä. pidä mielessä)
 tikku ukolle lisää frameja
 
+24.3
+lisätty mahdollisuus poistua ja resettää
+

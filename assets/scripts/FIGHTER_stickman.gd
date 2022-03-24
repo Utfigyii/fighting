@@ -12,13 +12,12 @@ var isOnGround  = true
 var isMoving = false
 var canAttack = true
 var isStunned = false
+var isJumping = false
 
 func _physics_process(delta):
 	handleInputs()
 	
-	y_velo -= GRAVITY * delta
-	if y_velo < -30:
-		y_velo = 30
+	doGraviy()
 		
 	if $groundCheck.is_colliding():
 		y_velo = 0
@@ -28,10 +27,13 @@ func _physics_process(delta):
 	print(getInputDirection())
 	if getInputDirection().x != 0:
 		isMoving = true
-		velocity = move_and_slide(Vector2(getInputDirection().x * speed, y_velo))
-		move_and_slide(velocity, Vector2(0, 1))
+	#	velocity = move_and_slide(Vector2(getInputDirection().x * speed, y_velo))
+	#	move_and_slide(velocity, Vector2(0, 1))
 	else:
 		isMoving = false
+	velocity = move_and_slide(Vector2(getInputDirection().x * speed, y_velo))
+	move_and_slide(velocity, Vector2(0, 1))
+	print(y_velo)
 		
 	doAnimation()
 	
@@ -56,6 +58,15 @@ func doAnimation():
 		$AnimationTree.set("parameters/isOnGround/current", 0)
 
 func handleInputs():
-	if Input.is_action_just_pressed("ui_up"):
-		if isOnGround:
-			y_velo = jumpForce
+	if Input.is_action_just_pressed("ui_accept"):
+		#if isOnGround:
+		y_velo = jumpForce
+		print("hyppää")
+		
+	if Input.is_action_just_pressed("close_game"):
+		get_tree().quit()
+	if Input.is_action_just_pressed("reload_scene"):
+		get_tree().reload_current_scene()
+
+func doGraviy():
+	pass
