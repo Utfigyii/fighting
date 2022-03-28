@@ -64,6 +64,13 @@ func handleInputs():
 		canMove = true
 		$defaultShape.disabled = false
 		$crouchShape.disabled = true
+	if not isAttacking:
+		$AnimationTree.set("parameters/isAttacking/current", 0)
+	
+	if Input.is_action_just_pressed("j") && canAttack:
+		isAttacking = true
+		canAttack = false
+		$AnimationTree.set("parameters/isAttacking/current", 1)
 		
 	
 	if Input.is_action_just_pressed("close_game"):
@@ -98,3 +105,7 @@ func doMovemet(delta):
 	else:
 		velocity = move_and_slide(Vector2(0, y_velo))
 		move_and_slide(velocity, Vector2(0, 1))
+
+func doneAttack():
+	isAttacking = false
+	canAttack = true
