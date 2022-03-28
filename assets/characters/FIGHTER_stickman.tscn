@@ -1,14 +1,16 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://assets/textures/fighters/stickman/stickman_idle0000.png" type="Texture" id=1]
 [ext_resource path="res://assets/textures/fighters/stickman/stickman_idle0001.png" type="Texture" id=2]
 [ext_resource path="res://assets/textures/fighters/stickman/stickman_idle0002.png" type="Texture" id=3]
 [ext_resource path="res://assets/textures/fighters/stickman/stickman_crouch0022.png" type="Texture" id=4]
+[ext_resource path="res://assets/textures/fighters/stickman/stickman_ljab0009.png" type="Texture" id=5]
 [ext_resource path="res://assets/scripts/FIGHTER_stickman.gd" type="Script" id=6]
 [ext_resource path="res://assets/textures/fighters/stickman/stickman_walk0020.png" type="Texture" id=7]
 [ext_resource path="res://assets/textures/fighters/stickman/stickman_walk0019.png" type="Texture" id=8]
 [ext_resource path="res://assets/textures/fighters/stickman/stickman_walk0018.png" type="Texture" id=9]
 [ext_resource path="res://assets/textures/fighters/stickman/stickman_jump0022.png" type="Texture" id=10]
+[ext_resource path="res://assets/textures/fighters/stickman/stickman_ljab0010.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 64, 214 )
@@ -36,6 +38,11 @@ animations = [ {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
 "name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "ljab",
 "speed": 5.0
 } ]
 
@@ -123,6 +130,35 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "ljab"
+length = 0.1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("KinematicBody2D/AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "ljab" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KinematicBody2D/AnimatedSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 0 ]
 }
 
 [sub_resource type="Animation" id=9]
@@ -230,6 +266,7 @@ root_node = NodePath("../..")
 anims/crouch = SubResource( 15 )
 anims/idle = SubResource( 2 )
 anims/jump = SubResource( 12 )
+anims/ljab = SubResource( 18 )
 anims/walk = SubResource( 9 )
 
 [node name="AnimationTree" type="AnimationTree" parent="KinematicBody2D"]
