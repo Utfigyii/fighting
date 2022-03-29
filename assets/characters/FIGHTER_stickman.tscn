@@ -326,8 +326,7 @@ disabled = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
 frames = SubResource( 1 )
-animation = "ljab"
-frame = 1
+animation = "crouch"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
 root_node = NodePath("../..")
@@ -353,7 +352,10 @@ cast_to = Vector2( 0, 250 )
 [node name="attacks" type="Node2D" parent="KinematicBody2D"]
 
 [node name="ljab" type="Area2D" parent="KinematicBody2D/attacks"]
+monitoring = false
+monitorable = false
 
 [node name="ljabHitbox" type="CollisionShape2D" parent="KinematicBody2D/attacks/ljab"]
 position = Vector2( 94, 59.25 )
 shape = SubResource( 21 )
+disabled = true
