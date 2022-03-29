@@ -2,19 +2,21 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/stickman_crkick0024.png-224e53a41b33639451f1bf46f0ca97a6.stex"
+path.s3tc="res://.import/stickman_crkick0024.png-224e53a41b33639451f1bf46f0ca97a6.s3tc.stex"
+path.etc2="res://.import/stickman_crkick0024.png-224e53a41b33639451f1bf46f0ca97a6.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/textures/fighters/stickman/stickman_crkick0024.png"
-dest_files=[ "res://.import/stickman_crkick0024.png-224e53a41b33639451f1bf46f0ca97a6.stex" ]
+dest_files=[ "res://.import/stickman_crkick0024.png-224e53a41b33639451f1bf46f0ca97a6.s3tc.stex", "res://.import/stickman_crkick0024.png-224e53a41b33639451f1bf46f0ca97a6.etc2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

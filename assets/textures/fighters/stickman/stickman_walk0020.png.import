@@ -2,19 +2,21 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/stickman_walk0020.png-fcd6a2f38af90e95290689ccf3624ffa.stex"
+path.s3tc="res://.import/stickman_walk0020.png-fcd6a2f38af90e95290689ccf3624ffa.s3tc.stex"
+path.etc2="res://.import/stickman_walk0020.png-fcd6a2f38af90e95290689ccf3624ffa.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/textures/fighters/stickman/stickman_walk0020.png"
-dest_files=[ "res://.import/stickman_walk0020.png-fcd6a2f38af90e95290689ccf3624ffa.stex" ]
+dest_files=[ "res://.import/stickman_walk0020.png-fcd6a2f38af90e95290689ccf3624ffa.s3tc.stex", "res://.import/stickman_walk0020.png-fcd6a2f38af90e95290689ccf3624ffa.etc2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

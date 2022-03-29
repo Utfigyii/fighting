@@ -2,19 +2,21 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/stickman_lkick0013.png-e46c0f5529ffa5f782b67c9eaff41c0a.stex"
+path.s3tc="res://.import/stickman_lkick0013.png-e46c0f5529ffa5f782b67c9eaff41c0a.s3tc.stex"
+path.etc2="res://.import/stickman_lkick0013.png-e46c0f5529ffa5f782b67c9eaff41c0a.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/textures/fighters/stickman/stickman_lkick0013.png"
-dest_files=[ "res://.import/stickman_lkick0013.png-e46c0f5529ffa5f782b67c9eaff41c0a.stex" ]
+dest_files=[ "res://.import/stickman_lkick0013.png-e46c0f5529ffa5f782b67c9eaff41c0a.s3tc.stex", "res://.import/stickman_lkick0013.png-e46c0f5529ffa5f782b67c9eaff41c0a.etc2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

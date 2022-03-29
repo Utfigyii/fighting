@@ -129,6 +129,54 @@ tracks/1/keys = {
 "update": 1,
 "values": [ 0, 1, 2 ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("KinematicBody2D/attacks/ljab/ljabHitbox:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KinematicBody2D/attacks/rjab/rjabhitbox:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KinematicBody2D/attacks/lkick/lkickhitbox:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("KinematicBody2D/attacks/rkick/rkickhitbox:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=12]
 resource_name = "jump"
@@ -240,7 +288,7 @@ tracks/5/keys = {
 [sub_resource type="Animation" id=25]
 resource_name = "lkick"
 length = 0.2
-loop = true
+step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("KinematicBody2D/AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -308,7 +356,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0.2 ),
+"times": PoolRealArray( 0.19 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -318,7 +366,7 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id=22]
 resource_name = "rjab"
-length = 0.15
+length = 0.2
 loop = true
 step = 0.01
 tracks/0/type = "value"
@@ -388,7 +436,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0.1 ),
+"times": PoolRealArray( 0.16 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -399,7 +447,6 @@ tracks/5/keys = {
 [sub_resource type="Animation" id=26]
 resource_name = "rkick"
 length = 0.3
-loop = true
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("KinematicBody2D/AnimatedSprite:animation")
@@ -564,7 +611,7 @@ animation = "rkick"
 animation = "walk"
 
 [sub_resource type="AnimationNodeBlendTree" id=7]
-graph_offset = Vector2( -121.762, 31.2133 )
+graph_offset = Vector2( -121.762, 0 )
 nodes/Animation/node = SubResource( 13 )
 nodes/Animation/position = Vector2( -60, 100 )
 nodes/crouchAnim/node = SubResource( 16 )
@@ -621,7 +668,7 @@ disabled = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
 frames = SubResource( 1 )
-animation = "rkick"
+animation = "idle"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
 root_node = NodePath("../..")
@@ -638,7 +685,7 @@ anims/walk = SubResource( 9 )
 tree_root = SubResource( 7 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/isAttacking/current = 4
+parameters/isAttacking/current = 0
 parameters/isCrouching/current = 0
 parameters/isOnGround/current = 1
 parameters/isWalking/current = 0
@@ -650,8 +697,6 @@ cast_to = Vector2( 0, 250 )
 [node name="attacks" type="Node2D" parent="KinematicBody2D"]
 
 [node name="ljab" type="Area2D" parent="KinematicBody2D/attacks"]
-monitoring = false
-monitorable = false
 
 [node name="ljabHitbox" type="CollisionShape2D" parent="KinematicBody2D/attacks/ljab"]
 position = Vector2( 94, 59.25 )
