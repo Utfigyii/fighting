@@ -67,10 +67,16 @@ func handleInputs():
 	if not isAttacking:
 		$AnimationTree.set("parameters/isAttacking/current", 0)
 	
-	if Input.is_action_just_pressed("j") && canAttack:
+	if Input.is_action_just_pressed("lp") && canAttack:
 		isAttacking = true
 		canAttack = false
+		canMove = false
 		$AnimationTree.set("parameters/isAttacking/current", 1)
+	if Input.is_action_pressed("rp") && canAttack:
+		isAttacking = true
+		canAttack = true
+		canMove = false
+		$AnimationTree.set("parameters/isAttacking/current", 2)
 		
 	
 	if Input.is_action_just_pressed("close_game"):
@@ -109,3 +115,5 @@ func doMovemet(delta):
 func doneAttack():
 	isAttacking = false
 	canAttack = true
+	canMove = true
+	print("done attacking")
