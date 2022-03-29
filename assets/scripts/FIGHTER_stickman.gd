@@ -106,10 +106,8 @@ func doGravity(delta):
 	y_velo -= GRAVITY * delta * -200
 	if y_velo > 400:
 		y_velo = 400
-	print(y_velo)
 
 func doMovemet(delta):
-	print(getInputDirection())
 	if getInputDirection().x != 0 && canMove:
 		isMoving = true
 
@@ -126,4 +124,8 @@ func doneAttack():
 	isAttacking = false
 	canAttack = true
 	canMove = true
-	print("done attacking")
+
+
+func _on_ljab_body_entered(body):
+	if body is KinematicBody2D && body.has_method("takeDamage"):
+		body.takeDamage(0, Vector2(30, -30), 0.5)

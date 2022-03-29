@@ -2,14 +2,16 @@
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://assets/characters/FIGHTER_stickman.tscn" type="PackedScene" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 318, 37 )
+[ext_resource path="res://assets/characters/FIGHTER_crashtestdummy.tscn" type="PackedScene" id=3]
 
 [node name="rootNode" type="Node2D"]
 
 [node name="FIGHTER_stickman" parent="." instance=ExtResource( 2 )]
-position = Vector2( 298, 296 )
+position = Vector2( 78, 194 )
+
+[node name="Node2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 466, 221 )
+scale = Vector2( 0.5, 0.5 )
 
 [node name="floor" type="StaticBody2D" parent="."]
 position = Vector2( 512.5, 462 )
@@ -20,7 +22,5 @@ position = Vector2( -12.4114, 0 )
 scale = Vector2( 0.612145, 1 )
 texture = ExtResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
-position = Vector2( -12.5681, 2 )
-scale = Vector2( 0.0626836, 1 )
-shape = SubResource( 1 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="floor"]
+polygon = PoolVector2Array( -39.2087, -700, -39.2087, -30, 14.1979, -29, 13.8844, -707, 19.7767, -693, 20.4662, 114, -45.5397, 94, -46.6054, -700 )
