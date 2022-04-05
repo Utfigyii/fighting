@@ -33,7 +33,7 @@ func handleInputs():
 	pass
 
 func doGravity(delta):
-	print(y_velo)
+	#print(y_velo)
 	if y_velo > 0:
 		$groundCheck.enabled = true
 		if $groundCheck.is_colliding():
@@ -61,7 +61,9 @@ func doMovemet(delta):
 			move_and_slide(velocity, Vector2(0, 1))
 	else:
 		velocity = move_and_slide(Vector2(velocity.x, -y_velo))
-		doGravity(delta)
+		y_velo -= GRAVITY * delta * -200
+		if y_velo > 400:
+			y_velo = 400
 		
 func doneAttack():
 	pass
@@ -72,9 +74,9 @@ func takeDamage(damage, knockback, stunTime):
 	stunned = true
 	$stunTimer.start(stunTime)
 	$groundCheck.enabled = false
-	print("iam hit", knockback)
+	#print("iam hit", knockback)
 
 
 func _on_stunTimer_timeout():
 	stunned = false
-	print("not stunned anymore")
+	#print("not stunned anymore")

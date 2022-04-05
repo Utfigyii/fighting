@@ -10,7 +10,7 @@
 position = Vector2( 78, 194 )
 
 [node name="Node2D" parent="." instance=ExtResource( 3 )]
-position = Vector2( 466, 221 )
+position = Vector2( 458, 173 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="floor" type="StaticBody2D" parent="."]

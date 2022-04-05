@@ -66,27 +66,27 @@ func handleInputs():
 		$crouchShape.disabled = true
 	if not isAttacking:
 		$AnimationTree.set("parameters/isAttacking/current", 0)
-	
-	if Input.is_action_just_pressed("lp") && canAttack:
-		isAttacking = true
-		canAttack = false
-		canMove = false
-		$AnimationTree.set("parameters/isAttacking/current", 1)
-	if Input.is_action_pressed("rp") && canAttack:
-		isAttacking = true
-		canAttack = false
-		canMove = false
-		$AnimationTree.set("parameters/isAttacking/current", 2)
-	if Input.is_action_pressed("lk") && canAttack:
-		isAttacking = true
-		canAttack = false
-		canMove = false
-		$AnimationTree.set("parameters/isAttacking/current", 3)
-	if Input.is_action_pressed("rk") && canAttack:
-		isAttacking = true
-		canAttack = true
-		canMove = true
-		$AnimationTree.set("parameters/isAttacking/current", 4)
+	if canAttack:
+		if Input.is_action_just_pressed("lp") && canAttack:
+			isAttacking = true
+			canAttack = false
+			canMove = false
+			$AnimationTree.set("parameters/isAttacking/current", 1)
+		if Input.is_action_pressed("rp") && canAttack:
+			isAttacking = true
+			canAttack = false
+			canMove = false
+			$AnimationTree.set("parameters/isAttacking/current", 2)
+		if Input.is_action_pressed("lk") && canAttack:
+			isAttacking = true
+			canAttack = false
+			canMove = false
+			$AnimationTree.set("parameters/isAttacking/current", 3)
+		if Input.is_action_pressed("rk") && canAttack:
+			isAttacking = true
+			canAttack = false
+			canMove = false
+			$AnimationTree.set("parameters/isAttacking/current", 4)
 		
 	
 	if Input.is_action_just_pressed("close_game"):
@@ -124,7 +124,8 @@ func doneAttack():
 	isAttacking = false
 	canAttack = true
 	canMove = true
-
+	$AnimationTree.set("parameters/isAttacking/current", 0)
+	print("done attacking")
 
 func _on_ljab_body_entered(body):
 	if body is KinematicBody2D && body.has_method("takeDamage"):

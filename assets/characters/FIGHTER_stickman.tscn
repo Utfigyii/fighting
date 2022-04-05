@@ -367,7 +367,6 @@ tracks/5/keys = {
 [sub_resource type="Animation" id=22]
 resource_name = "rjab"
 length = 0.2
-loop = true
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("KinematicBody2D/AnimatedSprite:animation")
@@ -611,7 +610,7 @@ animation = "rkick"
 animation = "walk"
 
 [sub_resource type="AnimationNodeBlendTree" id=7]
-graph_offset = Vector2( -121.762, 0 )
+graph_offset = Vector2( -565.333, -6.33333 )
 nodes/Animation/node = SubResource( 13 )
 nodes/Animation/position = Vector2( -60, 100 )
 nodes/crouchAnim/node = SubResource( 16 )
@@ -637,7 +636,7 @@ nodes/rkickAnim/node = SubResource( 28 )
 nodes/rkickAnim/position = Vector2( 320, 400 )
 nodes/walkAnim/node = SubResource( 10 )
 nodes/walkAnim/position = Vector2( -260, 320 )
-node_connections = [ "output", 0, "isAttacking", "isOnGround", 0, "Animation", "isOnGround", 1, "isWalking", "isAttacking", 0, "isOnGround", "isAttacking", 1, "ljabAnim", "isAttacking", 2, "rjabAnim", "isAttacking", 3, "lkickAnim", "isAttacking", 4, "rkickAnim", "isCrouching", 0, "idleAnim", "isCrouching", 1, "crouchAnim", "isWalking", 0, "isCrouching", "isWalking", 1, "walkAnim" ]
+node_connections = [ "output", 0, "isAttacking", "isOnGround", 0, "Animation", "isOnGround", 1, "isWalking", "isCrouching", 0, "idleAnim", "isCrouching", 1, "crouchAnim", "isAttacking", 0, "isOnGround", "isAttacking", 1, "ljabAnim", "isAttacking", 2, "rjabAnim", "isAttacking", 3, "lkickAnim", "isAttacking", 4, "rkickAnim", "isWalking", 0, "isCrouching", "isWalking", 1, "walkAnim" ]
 
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 84.5, 32.75 )
@@ -669,6 +668,7 @@ disabled = true
 [node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
 frames = SubResource( 1 )
 animation = "idle"
+frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
 root_node = NodePath("../..")
