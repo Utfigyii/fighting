@@ -60,11 +60,9 @@ func doMovemet(delta):
 			velocity = move_and_slide(Vector2(0, y_velo))
 			move_and_slide(velocity, Vector2(0, 1))
 	else:
-		while velocity.x != 0:
-			if velocity.x > 0:
-				velocity.x = velocity.x - 1
-			else:
-				velocity.x = velocity.x + 1
+		y_velo -= GRAVITY * delta * -200
+		if y_velo > 400:
+			y_velo = 400
 		
 func doneAttack():
 	pass
@@ -75,7 +73,7 @@ func takeDamage(damage, knockback, stunTime):
 	stunned = true
 	$stunTimer.start(stunTime)
 	$groundCheck.enabled = false
-	#print("iam hit", knockback)
+	print("iam hit", knockback)
 
 func _on_stunTimer_timeout():
 	stunned = false
