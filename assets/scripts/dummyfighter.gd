@@ -19,12 +19,14 @@ var canJump = true
 var canAttack = true
 var stunned = false
 
+var knockbackDir = Vector2()
+
 func _physics_process(delta):
 	handleInputs()
 	
 	doGravity(delta)
 	doMovemet(delta)
-	
+	$veloDir.cast_to = velocity * 10
 	
 func getInputDirection():
 	return Vector2(0, 0)
@@ -60,21 +62,23 @@ func doMovemet(delta):
 			velocity = move_and_slide(Vector2(0, y_velo))
 			move_and_slide(velocity, Vector2(0, 1))
 	else:
-		y_velo -= GRAVITY * delta * -200
-		if y_velo > 400:
-			y_velo = 400
+		#doGravity(delta)
+		knockbackDir = move_and_slide(knockbackDir)
+		move_and_slide(velocity, knockbackDir)
 		
 func doneAttack():
 	pass
 
 func takeDamage(damage, knockback, stunTime):
+	isOnGround = false
 	velocity = knockback
 	y_velo = knockback.y
 	stunned = true
 	$stunTimer.start(stunTime)
 	$groundCheck.enabled = false
 	print("iam hit", knockback)
+	knockbackDir = knockback
 
 func _on_stunTimer_timeout():
 	stunned = false
-	#print("not stunned anymore")
+	#print("not stunned anymore")3

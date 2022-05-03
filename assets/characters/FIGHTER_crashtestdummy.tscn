@@ -27,4 +27,7 @@ cast_to = Vector2( 0, 150 )
 [node name="stunTimer" type="Timer" parent="KinematicBody2D"]
 one_shot = true
 
+[node name="veloDir" type="RayCast2D" parent="KinematicBody2D"]
+enabled = true
+
 [connection signal="timeout" from="KinematicBody2D/stunTimer" to="KinematicBody2D" method="_on_stunTimer_timeout"]
