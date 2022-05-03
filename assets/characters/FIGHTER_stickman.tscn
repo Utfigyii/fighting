@@ -638,7 +638,7 @@ nodes/rkickAnim/node = SubResource( 28 )
 nodes/rkickAnim/position = Vector2( 320, 400 )
 nodes/walkAnim/node = SubResource( 10 )
 nodes/walkAnim/position = Vector2( -260, 320 )
-node_connections = [ "output", 0, "isAttacking", "isOnGround", 0, "Animation", "isOnGround", 1, "isWalking", "isAttacking", 0, "isOnGround", "isAttacking", 1, "ljabAnim", "isAttacking", 2, "rjabAnim", "isAttacking", 3, "lkickAnim", "isAttacking", 4, "rkickAnim", "isCrouching", 0, "idleAnim", "isCrouching", 1, "crouchAnim", "isWalking", 0, "isCrouching", "isWalking", 1, "walkAnim" ]
+node_connections = [ "output", 0, "isAttacking", "isCrouching", 0, "idleAnim", "isCrouching", 1, "crouchAnim", "isAttacking", 0, "isOnGround", "isAttacking", 1, "ljabAnim", "isAttacking", 2, "rjabAnim", "isAttacking", 3, "lkickAnim", "isAttacking", 4, "rkickAnim", "isOnGround", 0, "Animation", "isOnGround", 1, "isWalking", "isWalking", 0, "isCrouching", "isWalking", 1, "walkAnim" ]
 
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 84.5, 32.75 )
@@ -732,3 +732,4 @@ shape = SubResource( 30 )
 disabled = true
 
 [connection signal="body_entered" from="KinematicBody2D/attacks/ljab" to="KinematicBody2D" method="_on_ljab_body_entered"]
+[connection signal="body_entered" from="KinematicBody2D/attacks/rjab" to="KinematicBody2D" method="_on_rjab_body_entered"]

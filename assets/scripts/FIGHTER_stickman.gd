@@ -130,3 +130,8 @@ func doneAttack():
 func _on_ljab_body_entered(body):
 	if body is KinematicBody2D && body.has_method("takeDamage"):
 		body.takeDamage(0, Vector2(30, -30), 0.5)
+
+
+func _on_rjab_body_entered(body):
+	if body is KinematicBody2D && body.has_method("takeDamage"):
+		body.takeDamage(0, Vector2(40, -10), 0.3)
