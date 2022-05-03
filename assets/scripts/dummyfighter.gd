@@ -49,11 +49,6 @@ func doGravity(delta):
 		y_velo = 400
 
 func doMovemet(delta):
-	if getInputDirection().x != 0 && canMove:
-		isMoving = true
-
-	else:
-		isMoving = false
 	if !stunned:
 		if canMove:
 			velocity = move_and_slide(Vector2(getInputDirection().x * speed, y_velo))
@@ -63,8 +58,8 @@ func doMovemet(delta):
 			move_and_slide(velocity, Vector2(0, 1))
 	else:
 		#doGravity(delta)
-		knockbackDir = move_and_slide(knockbackDir)
-		move_and_slide(velocity, knockbackDir)
+		velocity = move_and_slide(Vector2(knockbackDir.x, y_velo)) #vika oli siinä että y nopeus ei koskaan muuttunutkaan koska oli kiinteänä eli knockbackdir
+		move_and_slide(velocity, Vector2(0, 1))
 		
 func doneAttack():
 	pass
@@ -72,7 +67,7 @@ func doneAttack():
 func takeDamage(damage, knockback, stunTime):
 	isOnGround = false
 	velocity = knockback
-	y_velo = knockback.y
+	y_velo = knockback.y  * 10
 	stunned = true
 	$stunTimer.start(stunTime)
 	$groundCheck.enabled = false

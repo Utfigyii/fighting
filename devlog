@@ -22,3 +22,6 @@ lisätty dummy
 
 11.4
 lisätty pelin suunnitelma /misc kansioon
+
+3.5
+viimein korjattu knockback, oli kiinteä arvo eli knockbackdir jonka y ei koskaan muuttunut, ja siksi ei toiminut
