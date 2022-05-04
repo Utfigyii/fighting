@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
+   sodipodi:docname="visualisaatio logiikasta.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64765011"
+     inkscape:cx="396.8192"
+     inkscape:cy="437.73636"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Taso 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect77"
+       width="74.760658"
+       height="31.456671"
+       x="-59.645115"
+       y="50.248966" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-47.389271"
+       y="66.998619"
+       id="text1753"><tspan
+         sodipodi:role="line"
+         id="tspan1751"
+         style="stroke-width:0.264583"
+         x="-47.389271"
+         y="66.998619">spawner</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect2689"
+       width="87.833557"
+       height="36.359009"
+       x="-18.792297"
+       y="104.1747" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-39.218704"
+       y="94.778542"
+       id="text5553"><tspan
+         sodipodi:role="line"
+         id="tspan5551"
+         style="stroke-width:0.264583"
+         x="-39.218704"
+         y="94.778542">välittää inputit hahmolle</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="0.8170566"
+       y="124.19257"
+       id="text8605"><tspan
+         sodipodi:role="line"
+         id="tspan8603"
+         style="stroke-width:0.264583"
+         x="0.8170566"
+         y="124.19257">hahmo</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect9927"
+       width="111.5282"
+       height="37.584595"
+       x="-4.902338"
+       y="-39.627235" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="20.017879"
+       y="-25.737276"
+       id="text11823"><tspan
+         sodipodi:role="line"
+         id="tspan11821"
+         style="stroke-width:0.264583"
+         x="20.017879"
+         y="-25.737276">elämäpalkki</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="20.017879"
+         y="-12.508151"
+         id="tspan11825">/ ui</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect13897"
+       width="130.72902"
+       height="42.486935"
+       x="-18.792297"
+       y="140.53371" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-5.3108673"
+       y="155.24072"
+       id="text18213"><tspan
+         sodipodi:role="line"
+         id="tspan18211"
+         style="stroke-width:0.264583"
+         x="-5.3108673"
+         y="155.24072">animaatiocontroller</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="-5.3108673"
+         y="168.46985"
+         id="tspan18215">blendtree</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect19309"
+       width="89.059143"
+       height="36.767529"
+       x="-18.792297"
+       y="183.02065" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-11.847318"
+       y="192.41678"
+       id="text21909"><tspan
+         sodipodi:role="line"
+         id="tspan21907"
+         style="stroke-width:0.264583"
+         x="-11.847318"
+         y="192.41678">joka attack oma</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="-11.847318"
+         y="205.6459"
+         id="tspan21911">areansa</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect25699"
+       width="89.059143"
+       height="31.865192"
+       x="-18.792297"
+       y="219.78818" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-10.621734"
+       y="228.36726"
+       id="text28299"><tspan
+         sodipodi:role="line"
+         id="tspan28297"
+         style="stroke-width:0.264583"
+         x="-10.621734"
+         y="228.36726">joka asento oma</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="-10.621734"
+         y="241.59639"
+         id="tspan28301">collisionshape</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="31.8652"
+       y="205.08115"
+       id="text34269"><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="31.8652"
+         y="205.08115"
+         id="tspan34271">ja omat</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="31.8652"
+         y="218.31027"
+         id="tspan34275">parametrit</tspan></text>
+  </g>
+</svg>
