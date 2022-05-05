@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.25343332"
-     inkscape:cx="1018.0193"
-     inkscape:cy="-211.1009"
+     inkscape:zoom="0.51"
+     inkscape:cx="-1235.2941"
+     inkscape:cy="287.2549"
      inkscape:window-width="1366"
      inkscape:window-height="744"
      inkscape:window-x="0"
@@ -33,7 +33,20 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
-     id="defs2" />
+     id="defs2">
+    <rect
+       x="-378.98039"
+       y="1586.3529"
+       width="110.35294"
+       height="65.686275"
+       id="rect20959" />
+    <rect
+       x="1362.3867"
+       y="1349.2412"
+       width="307.48014"
+       height="99.019057"
+       id="rect15119" />
+  </defs>
   <g
      inkscape:label="Taso 1"
      inkscape:groupmode="layer"
@@ -193,69 +206,372 @@
          x="31.8652"
          y="218.31027"
          id="tspan34275">parametrit</tspan></text>
-    <rect
-       style="fill:#e6e6e6;stroke-width:0.264583"
-       id="rect78"
-       width="86.983337"
-       height="43.149548"
-       x="-167.57764"
-       y="-45.920002" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="-161.55368"
-       y="-27.475674"
-       id="text1886"><tspan
+       x="91.551682"
+       y="196.05869"
+       id="text2334"><tspan
          sodipodi:role="line"
-         id="tspan1884"
+         id="tspan2332"
          style="stroke-width:0.264583"
-         x="-161.55368"
-         y="-27.475674">loader</tspan></text>
+         x="91.551682"
+         y="196.05869">arealta signaali hahmolle</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="91.551682"
+         y="209.28781"
+         id="tspan2468">joka lähettää signaalin </tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="91.551682"
+         y="222.51694"
+         id="tspan2470">vastustajalle</tspan></text>
     <rect
        style="fill:#e6e6e6;stroke-width:0.264583"
-       id="rect2108"
-       width="61.145023"
-       height="35.584"
-       x="-153.25845"
-       y="8.285244" />
+       id="rect3288"
+       width="109.62123"
+       height="37.9193"
+       x="-192.68352"
+       y="347.51978" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="-155.59724"
-       y="15.322701"
-       id="text3388"><tspan
+       x="-187.85742"
+       y="368.01782"
+       id="text4799"><tspan
          sodipodi:role="line"
-         id="tspan3386"
+         id="tspan4797"
          style="stroke-width:0.264583"
-         x="-155.59724"
-         y="15.322701">lataa hahmot </tspan><tspan
-         sodipodi:role="line"
-         style="stroke-width:0.264583"
-         x="-155.59724"
-         y="28.551826"
-         id="tspan3390">spawnereille</tspan><tspan
-         sodipodi:role="line"
-         style="stroke-width:0.264583"
-         x="-155.59724"
-         y="41.780952"
-         id="tspan3392">ja mapin</tspan></text>
+         x="-187.85742"
+         y="368.01782">mainmenu</tspan></text>
     <rect
        style="fill:#e6e6e6;stroke-width:0.264583"
-       id="rect5740"
-       width="117.95464"
-       height="26.020853"
-       x="-193.7374"
-       y="-98.931046" />
+       id="rect18273"
+       width="103.58178"
+       height="41.015602"
+       x="-42.167316"
+       y="338.08563" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="-185.81711"
-       y="-83.271614"
-       id="text7284"><tspan
+       x="-31.354164"
+       y="359.74451"
+       id="text8223"><tspan
          sodipodi:role="line"
-         id="tspan7282"
+         id="tspan8221"
          style="stroke-width:0.264583"
-         x="-185.81711"
-         y="-83.271614">map ja hahmo selector</tspan></text>
+         x="-31.354164"
+         y="359.74451">fighter selection</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect18275"
+       width="95.239616"
+       height="43.101135"
+       x="73.232521"
+       y="332.52417" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="85.161499"
+       y="359.05508"
+       id="text9481"><tspan
+         sodipodi:role="line"
+         id="tspan9479"
+         style="stroke-width:0.264583"
+         x="85.161499"
+         y="359.05508">map selection</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect18277"
+       width="171.01419"
+       height="47.272221"
+       x="161.52032"
+       y="392.30966" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="171.15805"
+       y="411.14191"
+       id="text11231"><tspan
+         sodipodi:role="line"
+         id="tspan11229"
+         style="stroke-width:0.264583"
+         x="171.15805"
+         y="411.14191">signaali loaderille joka hoitaa</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="171.15805"
+         y="424.37103"
+         id="tspan11233">pelinsisäiset toiminnot</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text15117"
+       style="fill:black;fill-opacity:1;line-height:1.25;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;white-space:pre;shape-inside:url(#rect15119)" />
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect18279"
+       width="61.175838"
+       height="29.89271"
+       x="179.59502"
+       y="342.95184" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="184.46959"
+       y="360.36508"
+       id="text17281"><tspan
+         sodipodi:role="line"
+         id="tspan17279"
+         style="stroke-width:0.264583"
+         x="184.46959"
+         y="360.36508">loader/peli</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text20957"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect20959);fill:#000000;fill-opacity:1;stroke:none" />
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect23035"
+       width="102.19143"
+       height="31.978273"
+       x="-141.28751"
+       y="410.44659" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-141.28752"
+       y="430.84543"
+       id="text22813"><tspan
+         sodipodi:role="line"
+         id="tspan22811"
+         style="stroke-width:0.264583"
+         x="-141.28752"
+         y="430.84543">controller asetukset</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -119.73692,388.20082 c 2.65444,4.50572 7.7457,15.6909 12.51323,18.07466 0.43141,0.21572 2.16477,0 2.78071,0 1.71808,0 1.06266,0.32771 2.08555,-0.69516"
+       id="path23150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -76.635784,360.39361 c 4.252601,-1.14591 20.202978,-3.43313 23.63611,0"
+       id="path23152" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 58.924274,359.69844 c 4.523279,-2.57407 9.470459,-4.01156 14.598782,-4.86627 0.685713,-0.11427 1.4111,0.16862 2.085517,0 0.686927,-0.17171 1.062617,-1.20663 2.085549,-0.69516 0.586224,0.2931 0.926899,0.92691 1.390357,1.39036"
+       id="path23154" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 164.99623,359.69844 c 1.15863,0.23173 2.3062,0.52809 3.4759,0.69517 1.36471,0.19497 3.63615,-0.61505 4.86627,0 2.36372,1.18187 4.75286,2.08555 7.64697,2.08555"
+       id="path23271" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 141.36012,369.43096 c 1.11126,6.62982 6.2701,8.98395 11.12288,12.51323 2.39996,1.74543 4.69867,3.63019 6.95181,5.56143 1.38668,1.18859 2.62716,3.1418 4.17106,4.17111 0.43113,0.28741 1.88618,0.54469 1.39036,0.69516 -1.10888,0.33653 -2.31727,-0.0415 -3.47591,-0.0622"
+       id="path23386" />
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.169694"
+       id="rect23570"
+       width="120.96128"
+       height="27.807207"
+       x="-370.99771"
+       y="-90.975174" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-373.77844"
+       y="-71.510132"
+       id="text24850"><tspan
+         sodipodi:role="line"
+         id="tspan24848"
+         style="stroke-width:0.264583"
+         x="-373.77844"
+         y="-71.510132">nodejärjestys skenessä</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.230364"
+       id="rect25086"
+       width="121.30888"
+       height="32.673443"
+       x="-370.77463"
+       y="-53.409515" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-364.51804"
+       y="-40.989662"
+       id="text26696"><tspan
+         sodipodi:role="line"
+         id="tspan26694"
+         style="stroke-width:0.264583"
+         x="-364.51804"
+         y="-40.989662">loader eli root</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="-364.51804"
+         y="-27.760538"
+         id="tspan26698">ei pausetu</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect27580"
+       width="122.05592"
+       height="26.209309"
+       x="-328.36862"
+       y="0.4669435" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-322.06012"
+       y="16.502762"
+       id="text29256"><tspan
+         sodipodi:role="line"
+         id="tspan29254"
+         style="stroke-width:0.264583"
+         x="-322.06012"
+         y="16.502762">p1spawner</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect29874"
+       width="90.025787"
+       height="21.20298"
+       x="-304.33304"
+       y="27.371437" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-295.29568"
+       y="40.138878"
+       id="text30890"><tspan
+         sodipodi:role="line"
+         id="tspan30888"
+         style="stroke-width:0.264583"
+         x="-295.29568"
+         y="40.138878">p1hahmo</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect31562"
+       width="118.87574"
+       height="23.288528"
+       x="-329.70709"
+       y="52.745491" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-318.58423"
+       y="65.165344"
+       id="text33106"><tspan
+         sodipodi:role="line"
+         id="tspan33104"
+         style="stroke-width:0.264583"
+         x="-318.58423"
+         y="65.165344">p2spawner</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect33526"
+       width="110.53358"
+       height="17.031912"
+       x="-306.41861"
+       y="76.381599" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-293.21014"
+       y="87.411102"
+       id="text34278"><tspan
+         sodipodi:role="line"
+         id="tspan34276"
+         style="stroke-width:0.264583"
+         x="-293.21014"
+         y="87.411102">p2hahmo</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect34580"
+       width="129.30342"
+       height="21.202988"
+       x="-326.92639"
+       y="94.943939" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-318.93182"
+       y="107.71139"
+       id="text35860"><tspan
+         sodipodi:role="line"
+         id="tspan35858"
+         style="stroke-width:0.264583"
+         x="-318.93182"
+         y="107.71139">mapspawner</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect36430"
+       width="112.9667"
+       height="18.074671"
+       x="-326.92639"
+       y="116.14693" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-295.29572"
+       y="125.43848"
+       id="text37248"><tspan
+         sodipodi:role="line"
+         id="tspan37246"
+         style="stroke-width:0.264583"
+         x="-295.29572"
+         y="125.43848">map</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect37934"
+       width="136.60281"
+       height="17.727076"
+       x="-367.59445"
+       y="133.77022" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-359.94748"
+       y="145.84248"
+       id="text42052"><tspan
+         sodipodi:role="line"
+         id="tspan42050"
+         style="stroke-width:0.264583"
+         x="-359.94748"
+         y="145.84248">UI</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect44706"
+       width="130.29953"
+       height="18.930681"
+       x="-352.60138"
+       y="-18.811361" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-342.96744"
+       y="-5.4421191"
+       id="text46910"><tspan
+         sodipodi:role="line"
+         id="tspan46908"
+         style="stroke-width:0.264583"
+         x="-342.96744"
+         y="-5.4421191">peli, pausettuu</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect47806"
+       width="124.43716"
+       height="24.331303"
+       x="-346.34476"
+       y="151.50766" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-331.746"
+       y="168.19199"
+       id="text49152"><tspan
+         sodipodi:role="line"
+         id="tspan49150"
+         style="stroke-width:0.264583"
+         x="-331.746"
+         y="168.19199">pausemenu ja hp</tspan></text>
   </g>
 </svg>
