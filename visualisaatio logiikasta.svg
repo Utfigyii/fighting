@@ -23,11 +23,11 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.64765011"
-     inkscape:cx="396.8192"
-     inkscape:cy="437.73636"
-     inkscape:window-width="1920"
-     inkscape:window-height="1056"
+     inkscape:zoom="0.25343332"
+     inkscape:cx="1018.0193"
+     inkscape:cy="-211.1009"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -193,5 +193,69 @@
          x="31.8652"
          y="218.31027"
          id="tspan34275">parametrit</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect78"
+       width="86.983337"
+       height="43.149548"
+       x="-167.57764"
+       y="-45.920002" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-161.55368"
+       y="-27.475674"
+       id="text1886"><tspan
+         sodipodi:role="line"
+         id="tspan1884"
+         style="stroke-width:0.264583"
+         x="-161.55368"
+         y="-27.475674">loader</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect2108"
+       width="61.145023"
+       height="35.584"
+       x="-153.25845"
+       y="8.285244" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-155.59724"
+       y="15.322701"
+       id="text3388"><tspan
+         sodipodi:role="line"
+         id="tspan3386"
+         style="stroke-width:0.264583"
+         x="-155.59724"
+         y="15.322701">lataa hahmot </tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="-155.59724"
+         y="28.551826"
+         id="tspan3390">spawnereille</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="-155.59724"
+         y="41.780952"
+         id="tspan3392">ja mapin</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect5740"
+       width="117.95464"
+       height="26.020853"
+       x="-193.7374"
+       y="-98.931046" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-185.81711"
+       y="-83.271614"
+       id="text7284"><tspan
+         sodipodi:role="line"
+         id="tspan7282"
+         style="stroke-width:0.264583"
+         x="-185.81711"
+         y="-83.271614">map ja hahmo selector</tspan></text>
   </g>
 </svg>

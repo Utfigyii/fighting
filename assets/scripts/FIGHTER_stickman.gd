@@ -19,10 +19,10 @@ var canJump = true
 var canAttack = true
 
 func _physics_process(delta):
-	handleInputs()
+	handleInputs() #siirrä tämä spawnerin puolelle
 	
 	doGravity(delta)
-	doMovemet(delta)
+	doMovemet(delta) #ehkä tämäkin
 	
 
 		
@@ -38,7 +38,7 @@ func getInputDirection():
 		facing_right = false
 	return inputDirection
 
-func doAnimation():
+func doAnimation(): #siisti jossain välissä
 	if isOnGround:
 		$AnimationTree.set("parameters/isOnGround/current", 1)
 		if isMoving:
@@ -48,7 +48,7 @@ func doAnimation():
 	else:
 		$AnimationTree.set("parameters/isOnGround/current", 0)
 
-func handleInputs():
+func handleInputs(): #siirrä spawnerin puolelle, animaattori jätä
 	if Input.is_action_just_pressed("ui_up") && isOnGround && canJump:
 		y_velo = -800
 		isOnGround = false
@@ -89,7 +89,7 @@ func handleInputs():
 			$AnimationTree.set("parameters/isAttacking/current", 4)
 		
 	
-	if Input.is_action_just_pressed("close_game"):
+	if Input.is_action_just_pressed("close_game"): #siirrä pois fighterin koodista skene manageriin
 		get_tree().quit()
 	if Input.is_action_just_pressed("reload_scene"):
 		get_tree().reload_current_scene()
@@ -127,7 +127,7 @@ func doneAttack():
 	$AnimationTree.set("parameters/isAttacking/current", 0)
 	print("done attacking")
 
-func _on_ljab_body_entered(body):
+func _on_ljab_body_entered(body): #siisti hyökkäyskoodit
 	if body is KinematicBody2D && body.has_method("takeDamage"):
 		body.takeDamage(0, Vector2(30, -30), 0.5)
 
