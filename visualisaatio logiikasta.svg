@@ -24,8 +24,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.51"
-     inkscape:cx="-1235.2941"
-     inkscape:cy="287.2549"
+     inkscape:cx="1719.6078"
+     inkscape:cy="936.27451"
      inkscape:window-width="1366"
      inkscape:window-height="744"
      inkscape:window-x="0"
@@ -573,5 +573,71 @@
          style="stroke-width:0.264583"
          x="-331.746"
          y="168.19199">pausemenu ja hp</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.264583"
+       id="rect53857"
+       width="88.982994"
+       height="27.112011"
+       x="315.90213"
+       y="134.83374" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="320.07318"
+       y="151.33128"
+       id="text53569"><tspan
+         sodipodi:role="line"
+         id="tspan53567"
+         style="stroke-width:0.264583"
+         x="320.07318"
+         y="151.33128">hyökkäysarea</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="331.89124"
+       y="186.09029"
+       id="text55467"><tspan
+         sodipodi:role="line"
+         id="tspan55465"
+         style="stroke-width:0.264583"
+         x="331.89124"
+         y="186.09029">signaali  hyökkäävälle hahmolle jos osuu</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="361.54535"
+       y="215.55759"
+       id="text57187"><tspan
+         sodipodi:role="line"
+         id="tspan57185"
+         style="stroke-width:0.264583"
+         x="361.54535"
+         y="215.55759">hahmo tarkistaa osuuko viholliseen</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="386.81042"
+       y="235.44803"
+       id="text60685"><tspan
+         sodipodi:role="line"
+         id="tspan60683"
+         style="stroke-width:0.264583"
+         x="386.81042"
+         y="235.44803">jos osuu lähetä signaali viholliselle että ottaa damagea</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="409.409"
+       y="256.30344"
+       id="text64913"><tspan
+         sodipodi:role="line"
+         id="tspan64911"
+         style="stroke-width:0.264583"
+         x="409.409"
+         y="256.30344">vihollinen ottaa knockbackin ja vähentää hp</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 326.3298,167.50719 c -2.93883,2.20786 -3.37986,5.3694 -4.86624,8.34215 -0.43148,0.86298 -1.76239,2.50644 -2.08555,3.4759 -0.14655,0.43967 0.14655,0.95069 0,1.39036 -0.2172,0.65165 -1.054,2.10801 -1.39036,2.78073 -1.17015,2.34032 6.63742,2.42205 7.64699,2.08553 0.21984,-0.0733 0.23172,-0.69518 0,-0.69518 -0.32772,0 -0.49856,0.43301 -0.6952,0.69518 -0.89024,1.18702 -2.01731,2.20358 -2.78069,3.47591 -1.46666,2.44442 -3.14068,10.73819 -2.08555,13.90358 0.53681,1.61047 4.57843,4.57845 5.56144,5.56144 0.36639,0.36639 0.32877,1.02397 0.69516,1.39036 0.90292,0.90291 3.72137,1.85656 4.86627,2.08555 4.85524,0.97107 12.01108,-1.16831 16.68431,0 2.68751,0.67187 4.33446,3.51674 6.95179,4.17106 0.89924,0.22481 1.88151,-0.2248 2.78075,0 0.71088,0.17773 2.08552,1.42797 2.08552,0.69518 0,-0.33984 -3.81452,0.16035 -4.17107,0.6952 -0.28745,0.43113 -0.46347,0.9269 -0.6952,1.39035 -0.69516,0.69518 -1.47137,1.31784 -2.08552,2.08554 -0.85363,1.06702 -3.19066,10.01774 -2.08553,11.12287 1.55835,1.55837 10.2121,3.01568 12.51323,3.47591 0.9089,0.18178 1.88148,-0.22481 2.7807,0 2.3e-4,6e-5 2.7805,1.39031 2.78074,1.39035 0.59838,0.11968 5.08315,0.2169 5.56144,0.69518 0.72564,0.72565 -0.56026,9.44211 0,11.12288 0.45355,1.36067 2.31788,2.08553 3.47588,2.08553 4.31112,0 8.12128,1.39037 12.51323,1.39037 0.69519,0 1.59398,-0.49156 2.08555,0 0.16386,0.16386 -0.20725,0.59155 0,0.69518 0.6218,0.3109 1.46376,-0.31089 2.08555,0 0.29311,0.14655 0.40207,0.54862 0.69517,0.69518 0.74703,0.37351 1.97638,-0.2681 2.78072,0 1.50352,0.50117 1.93066,0.69518 3.47588,0.69518"
+       id="path65688" />
   </g>
 </svg>
